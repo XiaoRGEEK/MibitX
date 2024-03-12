@@ -9,9 +9,8 @@
     "files": [
         "README.md",
         "main.ts",
-        "_locales/zh-cn/MiBit-strings.json",
-        "_locales/zh-tw/MiBit-strings.json"
-
+        "_locales/zh-cn/MiBitX-strings.json",
+        "_locales/zh-tw/MiBitX-strings.json"
     ],
     "testFiles": [
         "test.ts"
