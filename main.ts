@@ -144,7 +144,7 @@ namespace MiBitX {
         return  Math.floor(length);
     }
 
-    //% blockId=MiBitX_CarControl block="Car direction| %driection | speed %speed"
+    //% blockId=MiBitX_CarControl block="CarControl direction| %driection | speed %speed"
     //% weight=100
     //% blockGap=10
     //% color="#87CEEB"
@@ -160,12 +160,12 @@ namespace MiBitX {
         pins.i2cWriteBuffer(MIBIT_ADDRESS, buf1);
     }
 
-    //% blockId=MiBitX_MotorControl block="MotorControl Id| %motor | direction| %driection | speed | %speed"
+    //% blockId=MiBitX_MotorControl block="MotorControl| %motor | direction| %driection | speed | %speed"
     //% weight=100
     //% blockGap=10
     //% color="#87CEEB"
-    //% speed.min=0 Speed.max=100
-    export function MotorControl(motor: MotorId, direction: MotorDirection, speed: CarSpeed): void  {
+    //% speed.min=0 speed.max=100
+    export function MotorControl(motor: MotorId, direction: MotorDirection, speed: number): void  {
         let buf1 = pins.createBuffer(6);
         buf1[0] = 0xFF;
         buf1[1] = 0x01;
