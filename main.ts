@@ -79,7 +79,7 @@ namespace MiBitX {
         //% blockId="TurnOff" block="TurnOff"
         TurnOff=0,
         //% blockId="TurnOn" block="TurnOn"
-        TurnOn = 0,
+        TurnOn,
     }
 
     //% blockId=MiBitX_CheckIRStatus block="IR_Sensor|pin %IRSensor| |%value|obstacle"
