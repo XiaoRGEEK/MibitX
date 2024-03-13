@@ -26,9 +26,10 @@
     "MiBitX.BuzzerStatus.TurnOff|block": "关闭",
     "MiBitX.BuzzerStatus.TurnOn|block": "打开",
     "MiBitX.CheckIRStatus|block": "传感器|%pin | %value |障碍物",
-    "MiBitX.GetUltrasonicDistance|block": "获取超声波距离",
-    "MiBitX.CarControl|block": "控制小车|%direction | 速度 |%speed",
-    "MiBitX.MotorControl|block": "控制电机 |%motor | 方向 |%direction | 速度 |%speed",
+    "MiBitX.GetUltrasonicDistance|block": "获取超声波距离(cm)",
+    "MiBitX.CarControl|block": "控制小车|%value0 | 速度 |%value1",
+    "MiBitX.MotorControl|block": "控制电机 |%motor | 方向 |%value0 | 速度 |%value1",
     "MiBitX.XyzControl|block": "控制小车做 X| %x |Y |%y |Z |%z 运动",
     "MiBitX.BuzzerControl|block": "%status | 蜂鸣器"
-}
+  }
+  

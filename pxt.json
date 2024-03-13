@@ -1,7 +1,7 @@
 {
     "name": "MiBitX",
-    "version": "1.0.0",
-    "description": "Extension for XiaoRGEEK MiBitX 1.0.0",
+    "version": "1.0.1",
+    "description": "Extension for XiaoRGEEK MiBitX 1.0.1",
     "license": "MIT",
     "dependencies": {
         "core": "*"

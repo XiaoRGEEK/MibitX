@@ -82,7 +82,7 @@ namespace MiBitX {
         TurnOn,
     }
 
-    //% blockId=MiBitX_CheckIRStatus block="IR_Sensor|pin %IRSensor| |%value|obstacle"
+    //% blockId=MiBitX_CheckIRStatus block="IR_Sensor|%pin |%value |obstacle"
     //% weight=100
     //% blockGap=10
     //% color="#87CEEB"
@@ -144,34 +144,34 @@ namespace MiBitX {
         return  Math.floor(length);
     }
 
-    //% blockId=MiBitX_CarControl block="CarControl direction| %driection | speed %speed"
+    //% blockId=MiBitX_CarControl block="CarControl direction| %value0 | speed | %value1"
     //% weight=100
     //% blockGap=10
     //% color="#87CEEB"
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=4
-    export function CarControl(direction: CarDirection, speed: CarSpeed): void  {
+    export function CarControl(value0: CarDirection, value1: CarSpeed): void  {
         let buf1 = pins.createBuffer(6);
         buf1[0] = 0xFF;
         buf1[1] = 0x00;
-        buf1[2] = direction;
-        buf1[3] = speed;
+        buf1[2] = value0;
+        buf1[3] = value1;
         buf1[4] = 0x00;
         buf1[5] = 0xFF;
         pins.i2cWriteBuffer(MIBIT_ADDRESS, buf1);
     }
 
-    //% blockId=MiBitX_MotorControl block="MotorControl| %motor | direction| %driection | speed | %speed"
+    //% blockId=MiBitX_MotorControl block="MotorControl| %motor | direction| %value0 | speed | %value1"
     //% weight=100
     //% blockGap=10
     //% color="#87CEEB"
-    //% speed.min=0 speed.max=100
-    export function MotorControl(motor: MotorId, direction: MotorDirection, speed: number): void  {
+    //% value1.min=0 value1.max=100
+    export function MotorControl(motor: MotorId, value0: MotorDirection, value1: number): void  {
         let buf1 = pins.createBuffer(6);
         buf1[0] = 0xFF;
         buf1[1] = 0x01;
         buf1[2] = motor;
-        buf1[3] = direction;
-        buf1[4] = speed;
+        buf1[3] = value0;
+        buf1[4] = value1;
         buf1[5] = 0xFF;
         pins.i2cWriteBuffer(MIBIT_ADDRESS, buf1);
     }
