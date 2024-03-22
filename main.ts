@@ -158,6 +158,8 @@ namespace MiBitX {
         buf1[4] = 0x00;
         buf1[5] = 0xFF;
         pins.i2cWriteBuffer(MIBIT_ADDRESS, buf1);
+        basic.pause(10);
+
     }
 
     //% blockId=MiBitX_MotorControl block="MotorControl| %motor | direction| %value0 | speed | %value1"
@@ -174,6 +176,7 @@ namespace MiBitX {
         buf1[4] = value1;
         buf1[5] = 0xFF;
         pins.i2cWriteBuffer(MIBIT_ADDRESS, buf1);
+        basic.pause(10);
     }
     
     //% blockId=MiBitX_XyzControl block="XyzControl X| %x | y| %y | z | %z"
@@ -192,6 +195,7 @@ namespace MiBitX {
         buf1[4] = z+100;
         buf1[5] = 0xFF;
         pins.i2cWriteBuffer(MIBIT_ADDRESS, buf1);
+        basic.pause(10);
     }
 
     //% blockId=MiBitX_BuzzerControl block="%status | Buzzer"
@@ -207,6 +211,7 @@ namespace MiBitX {
         buf1[4] = 0x00;
         buf1[5] = 0xFF;
         pins.i2cWriteBuffer(MIBIT_ADDRESS, buf1);
+        basic.pause(10);
     }
 
 }
